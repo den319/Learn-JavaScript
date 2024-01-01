@@ -294,15 +294,15 @@
                 Function.prototype.myCall2= function() {
                     const func2= this;
 
-                    let context2= arguments[0];
-                    let args2= [...arguments];
+                    let context2= arguments[0]; // obj1
+                    let args2= [...arguments]; 
                     // console.log(args);
-                    args2.shift();
+                    args2.shift(); // 10, 8, 2, 5
 
                     
 
-                    const contextCopy2= {...context2};
-                    contextCopy2.funcName2= func2;
+                    const contextCopy2= {...context2}; // obj1
+                    contextCopy2.funcName2= func2; // this
 
                     contextCopy2.funcName2(...args2);
                 }

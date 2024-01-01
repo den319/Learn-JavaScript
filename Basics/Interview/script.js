@@ -1610,33 +1610,45 @@
 
 // question- 79:
 
-    const student= {
-        name: 'john',
-        lastname: 'adamson',
-        college: 'boston',
+    // const student= {
+    //     name: 'john',
+    //     lastname: 'adamson',
+    //     college: 'boston',
 
-        print_college: () => {
-            console.log('1. ', this.college);
-        },
-        print_name: function() {
-            console.log('2. ', this.name, this.lastname);
+    //     print_college: () => {
+    //         console.log('1. ', this.college);
+    //     },
+    //     print_name: function() {
+    //         console.log('2. ', this.name, this.lastname);
 
-            function func1() {
-                console.log('3. ', this.name); // this -> window.name= ""
+    //         function func1() {
+    //             console.log('3. ', this.name); // this -> window.name= ""
 
-                function func2() {
-                    console.log('4. ', this.name); // this -> window.name= ""
+    //             function func2() {
+    //                 console.log('4. ', this.name); // this -> window.name= ""
 
-                    function func3() {
-                        console.log('5. ', this.name); // this -> window.name= ""
-                    };
-                    func3(); // => function invocation 'this' will point out to the window
-                }
-                func2(); // => function invocation 'this' will point out to the window
-            }
-            func1(); // => function invocation  'this' will point out to the window
-        },
-    };
+    //                 function func3() {
+    //                     console.log('5. ', this.name); // this -> window.name= ""
+    //                 };
+    //                 func3(); // => function invocation 'this' will point out to the window
+    //             }
+    //             func2(); // => function invocation 'this' will point out to the window
+    //         }
+    //         func1(); // => function invocation  'this' will point out to the window
+    //     },
+    // };
 
-    student.print_name();
-    student.print_college();
+    // student.print_name();
+    // student.print_college();
+
+
+
+// question- 80:
+
+    const x= "df"
+    const obj= {};
+
+    console.log(x && obj); // => {}
+    console.log(obj && x); // => df
+    console.log(x && obj && x); // => df
+    console.log(x && obj || x); // => {}   ----------- try other thing as well and find why this is happening

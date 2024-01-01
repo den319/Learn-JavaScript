@@ -58,7 +58,7 @@
     --> browser have 3 components
         1. Javascript
         2. DOM(Documment / HTML): provides only structure not beautification
-        3. BOM(Browser Object Model)
+        3. BOM(Browser Object Model / window, setimeout, setInterval, geoLocation)
 */
 
 // --------------- 1. DOM (Document Object Model) / web API
